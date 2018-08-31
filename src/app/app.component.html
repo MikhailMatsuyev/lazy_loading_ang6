@@ -7,3 +7,11 @@
 <button routerLink="">Home</button>
 
 <router-outlet></router-outlet>
+
+<div>
+      <h2>Wikipedia Search</h2>
+      <input type="text" [formControl]="term"/>
+      <ul>
+        <li *ngFor="let item of items | async">{{item}}</li>
+      </ul>
+    </div>
